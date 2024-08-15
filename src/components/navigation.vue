@@ -13,12 +13,8 @@ const items = ref([
         icon: 'pi pi-home',
     },
     {
-        label: 'Education',
-        icon: 'pi pi-graduation-cap'
-    },
-    {
-        label: 'Work Experience',
-        icon: 'pi pi-desktop'
+        label: 'Jounery',
+        icon: 'pi pi-wave-pulse'
     },
     {
         label: 'Expertises',
@@ -56,6 +52,10 @@ const items = ref([
         padding: 0 50px;
         border: none;
         border-bottom: 1px solid #e5e5e5;
+        position: sticky;
+        position: -webkit-sticky; // Needed for Safari browsers.
+        z-index: 10000; // This prevents elements to be seen through the toolbar.
+        top: 0;
     }
     
     .p-menubar-end {

@@ -40,8 +40,9 @@
         &-image {
             img {
                 border-radius: 50%; 
-                border: 2px dashed #00377870;
+                // border: 2px dashed #00377870;
                 padding: 15px;
+                box-shadow: inset 0px 0px 25px 5px #00377870;
             }
         }
 

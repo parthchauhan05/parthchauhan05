@@ -124,6 +124,7 @@ const events = ref([
         <img class="wave" src="../assets/wave-open.svg"/>
         <div class="education-history">
             <h3>My Journey</h3>
+            <i class="pi pi-ellipsis-h" style="font-size: 2rem;color: white;"></i>
             <div class="education-timeline">
                 <Timeline :value="events" class="customized-timeline">
                     <template #marker="slotProps">
@@ -199,13 +200,13 @@ const events = ref([
                 line-height: 2.5rem;
                 margin: 0;
                 color: white;
-                padding-bottom: 30px;
             }
         }
         &-timeline {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            padding-top: 30px;
             h4 {
                 font-size: 1.5rem;
                 font-weight: 700;

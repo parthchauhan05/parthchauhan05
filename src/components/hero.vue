@@ -5,7 +5,7 @@
     <section class="hero">
         <div class="hero-info">
             <h4>Hello, I am Parth --</h4>
-            <h3>I am an expirenced Web Developer</h3>
+            <h3>I am an experienced Web Developer</h3>
             <p>I am currently working as a Software Engineer at Sryas Inc. I have completed my graduation in Information and Communication Technology. I have a diploma in Interactive Media Design, focused on UI/UX and Frontend Web Development.</p>
             <div class="hero-info-button-group">
                 <Button rounded>

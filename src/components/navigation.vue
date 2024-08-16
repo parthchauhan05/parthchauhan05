@@ -38,7 +38,7 @@ const items = ref([
         </a>
     </template>
     <template #end>
-        <Button outlined rounded>
+        <Button outlined rounded as="a" href="https://wa.me/+16135012020" target="_blank">
             <i class="pi pi-whatsapp"></i>
             <span>Let's talk</span>
         </Button>
@@ -60,9 +60,13 @@ const items = ref([
         top: 0;
         a, .p-button {
             color: white;
+            text-decoration: none;
             &:hover {
                 color: var(--p-highlight-color);
             }
+        }
+        &.p-focus {
+            color: var(--p-highlight-color);
         }
         h3 {
             font-size: 2.25rem;

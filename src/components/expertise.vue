@@ -18,16 +18,6 @@ const expertise = ref([
     level: "Advanced",
   },
   {
-    name: "HTML",
-    icon: "../../public/tech/html5.svg",
-    level: "Advanced",
-  },
-  {
-    name: "CSS",
-    icon: "../../public/tech/css3.svg",
-    level: "Advanced",
-  },
-  {
     name: "React",
     icon: "../../public/tech/react.svg",
     level: "Intermediate",
@@ -38,8 +28,28 @@ const expertise = ref([
     level: "Advanced",
   },
   {
+    name: "Element Plus",
+    icon: "../../public/tech/element-plus.svg",
+    level: "Advanced",
+  },
+  {
+    name: "HTML",
+    icon: "../../public/tech/html5.svg",
+    level: "Advanced",
+  },
+  {
+    name: "CSS",
+    icon: "../../public/tech/css3.svg",
+    level: "Advanced",
+  },
+  {
     name: "SCSS",
     icon: "../../public/tech/scss.svg",
+    level: "Intermediate",
+  },
+  {
+    name: "Bootstrap",
+    icon: "../../public/tech/bootstrap.svg",
     level: "Intermediate",
   },
   {
@@ -50,6 +60,21 @@ const expertise = ref([
   {
     name: "Python",
     icon: "../../public/tech/python.svg",
+    level: "Intermediate",
+  },
+  {
+    name: "Ruby",
+    icon: "../../public/tech/ruby.svg",
+    level: "Intermediate",
+  },
+  {
+    name: "Ruby on Rails",
+    icon: "../../public/tech/rails.svg",
+    level: "Intermediate",
+  },
+  {
+    name: "SQL",
+    icon: "../../public/tech/sql.svg",
     level: "Intermediate",
   },
   {
@@ -81,6 +106,11 @@ const tools = ref([
     level: "Intermediate",
   },
   {
+    name: "Confluence",
+    icon: "../../public/tech/confluence.svg",
+    level: "Intermediate",
+  },
+  {
     name: "Slack",
     icon: "../../public/tech/slack.svg",
     level: "Intermediate",
@@ -88,6 +118,11 @@ const tools = ref([
   {
     name: "Office 365",
     icon: "../../public/tech/office365.svg",
+    level: "Intermediate",
+  },
+  {
+    name: "Figma",
+    icon: "../../public/tech/figma.svg",
     level: "Intermediate",
   },
 ])
@@ -136,11 +171,11 @@ const tools = ref([
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      gap: 6rem;
+      gap: 5rem;
       margin: 2rem 0;
       img {
-        width: 6rem;
-        height: 6rem;
+        width: 3rem;
+        height: 3rem;
       }
       &-item {
         display: flex;

@@ -51,11 +51,27 @@ const items = ref([
     &.p-menubar {
         padding: 0 50px;
         border: none;
-        border-bottom: 1px solid #e5e5e5;
+        background-color: var(--p-primary-800);
+        border-radius: 0;
+        color: white;
         position: sticky;
-        position: -webkit-sticky; // Needed for Safari browsers.
-        z-index: 10000; // This prevents elements to be seen through the toolbar.
+        position: -webkit-sticky; 
+        z-index: 10000; 
         top: 0;
+        a, .p-button {
+            color: white;
+            &:hover {
+                color: var(--p-highlight-color);
+            }
+        }
+        h3 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            line-height: 2.5rem;
+            margin-bottom: 1rem ; 
+            margin-top: 0.5rem;
+            // color: var(--p-highlight-color);
+        }
     }
     
     .p-menubar-end {

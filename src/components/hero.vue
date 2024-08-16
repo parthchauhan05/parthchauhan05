@@ -14,10 +14,10 @@
                     <i class="pi pi-download"></i>Download CV</Button>
             </div>
             <div class="hero-info-social-links">
-                <i class="pi pi-github"></i>
-                <i class="pi pi-linkedin"></i>
-                <i class="pi pi-google"></i>
-                <i class="pi pi-whatsapp"></i>
+                <a href="https://github.com/parthchauhan05" target="_blank"><i class="pi pi-github" style="font-size: 1.5rem;"></i></a>
+                <a href="https://www.linkedin.com/in/parthchauhan05/" target="_blank"><i class="pi pi-linkedin" style="font-size: 1.5rem;"></i></a>
+                <a href="mailto:parthchauhan05@gmail.com" target="_blank"><i class="pi pi-google" style="font-size: 1.5rem; color: var(--p-primary-400);"></i></a> 
+                <a href="https://wa.me/+16135012020" target="_blank"><i class="pi pi-whatsapp" style="font-size: 1.5rem;"></i></a>
             </div>
         </div>
         <div class="hero-image">

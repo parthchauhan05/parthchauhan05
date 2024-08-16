@@ -63,6 +63,11 @@ const expertise = ref([
     level: "Intermediate",
   },
   {
+    name: "Django",
+    icon: "../../public/tech/django.svg",
+    level: "Basic",
+  },
+  {
     name: "Ruby",
     icon: "../../public/tech/ruby.svg",
     level: "Intermediate",

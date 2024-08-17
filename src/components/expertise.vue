@@ -163,6 +163,7 @@ const tools = ref([
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    padding: 0 30px;
     h3 {
       font-size: 2.25rem;
       font-weight: 700;

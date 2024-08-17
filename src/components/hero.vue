@@ -1,5 +1,28 @@
 <script setup>
 
+const downloadCv = async () => {
+    const url = '../../public/parth-chauhan-resume.pdf';
+    try {
+        const response = await fetch(url);
+        const blob = await response.blob();
+        const downloadUrl = URL.createObjectURL(blob);
+
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.download = 'parth-chauhan-resume.pdf'; // You can change the filename here
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        URL.revokeObjectURL(downloadUrl);
+    } catch (error) {
+        console.error('Error downloading the file', error);
+    }
+}
+
+const hireMe = () => {
+    window.open('mailto:parthchauhan05@gmail.com');
+}
 </script>
 <template>
     <section class="hero">
@@ -9,8 +32,8 @@
             <p>I am currently working as a Software Engineer at Sryas Inc. I have completed my graduation in Information and Communication Technology. I have a diploma in Interactive Media Design, focused on UI/UX and Frontend Web Development.</p>
             <div class="hero-info-button-group">
                 <Button rounded>
-                    <i class="pi pi-envelope"></i>Hire me</Button>
-                <Button outlined rounded>
+                    <i class="pi pi-envelope" @click="hireMe"></i>Hire me</Button>
+                <Button outlined rounded @click="downloadCv">
                     <i class="pi pi-download"></i>Download CV</Button>
             </div>
             <div class="hero-info-social-links">
@@ -27,6 +50,9 @@
 </template>
 <style lang="scss">
     .hero {
+        @media (screen and max-width: 960px) {
+            flex-direction: column-reverse;
+        }
         width: 100%;
         max-width: 1200px;
         margin: 0 auto; 
@@ -68,6 +94,9 @@
                 max-width: 90%;
             }
             &-button-group {
+                @media (screen and max-width: 960px) {
+                    flex-direction: column;
+                }
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;

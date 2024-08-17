@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
+import jump from 'jump.js';
 
 const isMobile = computed(() => window.innerWidth < 961);
 const items = ref([
@@ -11,20 +12,32 @@ const items = ref([
     {
         label: 'Home',
         icon: 'pi pi-home',
+        location: '.hero'
     },
     {
         label: 'Jounery',
-        icon: 'pi pi-wave-pulse'
+        icon: 'pi pi-wave-pulse',
+        location: '.education'
     },
     {
         label: 'Expertises',
-        icon: 'pi pi-sparkles'
+        icon: 'pi pi-sparkles',
+        location: '.expertise'
+
     },
     {
         label: 'Contact',
-        icon: 'pi pi-phone'
+        icon: 'pi pi-phone',
+        location: '.contact'
     },
 ]);
+
+const goTo = (location) => {
+    jump(location, {
+        duration: 500,
+        offset: -80
+    })
+}
 </script>
 <template>
   <Menubar :model="items" class="parth-navigation">
@@ -32,7 +45,7 @@ const items = ref([
       <h3>Parth Chauhan</h3>
     </template>
     <template #item="{ item, props }">
-        <a v-ripple class="flex items-center" v-bind="props.action">
+        <a v-ripple class="flex items-center" v-bind="props.action" @click="goTo(item.location)">
             <span :class="item.icon" />
             <span class="ml-2">{{ item.label.toUpperCase() }}</span>
         </a>
@@ -49,7 +62,7 @@ const items = ref([
 .parth-navigation {
     justify-content: space-between;
     &.p-menubar {
-        padding: 0 50px;
+        padding: 10px 50px;
         border: none;
         background-color: var(--p-primary-800);
         border-radius: 0;
@@ -65,8 +78,10 @@ const items = ref([
                 color: var(--p-highlight-color);
             }
         }
-        &.p-focus {
-            color: var(--p-highlight-color);
+        .p-menubar-item:hover {
+            color: var(--p-menubar-item-focus-color);
+            background-color: var(--p-menubar-item-focus-background);
+            border-radius: 5px;
         }
         h3 {
             font-size: 2.25rem;
@@ -80,6 +95,14 @@ const items = ref([
     
     .p-menubar-end {
         margin-left: 0;
+    }
+    .p-menubar-item.p-focus > .p-menubar-item-content,  .p-menubar-item.p-focus > .p-menubar-item-content:hover{
+        background: unset !important;
+        color: unset !important;
+    }
+    &.p-menubar-mobile .p-menubar-root-list {
+        background-color: var(--p-primary-800);
+        border: none;
     }
 }
 </style>

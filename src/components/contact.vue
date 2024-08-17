@@ -60,6 +60,9 @@
                 color: white;
             }
             &-button-group {
+                @media (screen and max-width: 960px) {
+                    flex-direction: column;
+                }
                 display: flex;
                 flex-direction: row;
                 justify-content: center;

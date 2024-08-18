@@ -3,7 +3,7 @@
 
 <template>  
     <section class="contact">
-        <img class="wave" src="../assets/wave-open.svg"/>
+        <img class="wave wave-open" src="../assets/wave-open.svg"/>
         <div class="contact-info">
             <h3>Contact</h3>
             <i class="pi pi-ellipsis-h" style="font-size: 2rem;color: white;"></i>
@@ -36,6 +36,7 @@
 
 <style lang="scss">
     .contact  {
+        overflow: hidden;
         &-info {
             padding-bottom: 2rem;
             background-color: var(--p-primary-400);
@@ -79,8 +80,15 @@
             }
         }
         img.wave {
-            width: 100%;
+            width: 102%;
+            overflow: hidden;
             display: block;
+            &.wave-close {
+                margin-top: -5px;
+            }
+            &.wave-open {
+                margin-bottom: -5px;
+            }
         }
     }
     @media screen and (max-width: 960px) {

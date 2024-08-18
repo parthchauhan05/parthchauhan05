@@ -122,7 +122,7 @@ const events = ref([
 
 <template>
     <section class="education">
-        <img class="wave" src="../assets/wave-open.svg"/>
+        <img class="wave wave-open" src="../assets/wave-open.svg"/>
         <div class="education-history">
             <h3>My Journey</h3>
             <i class="pi pi-ellipsis-h" style="font-size: 2rem;color: white;"></i>
@@ -191,7 +191,7 @@ const events = ref([
                 </Timeline>
             </div>
         </div>
-        <img class="wave" src="../assets/wave-close.svg"/>
+        <img class="wave wave-close" src="../assets/wave-close.svg"/>
     </section>
 </template>
 
@@ -200,6 +200,7 @@ const events = ref([
         width: 100%;
         margin: 0 auto;
         text-align: center;
+        overflow: hidden;
         &-history {
             width: 100%;
             margin: 0 auto;
@@ -268,8 +269,15 @@ const events = ref([
             }
         }
         img.wave {
-            width: 100%;
+            width: 102%;
+            overflow: hidden;
             display: block;
+            &.wave-close {
+                margin-top: -5px;
+            }
+            &.wave-open {
+                margin-bottom: -5px;
+            }
         }
     }
 </style>

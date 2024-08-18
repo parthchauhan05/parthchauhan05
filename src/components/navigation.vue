@@ -84,9 +84,9 @@ const goTo = (location) => {
             border-radius: 5px;
         }
         h3 {
-            font-size: 2.25rem;
+            font-size: 1.75rem;
             font-weight: 600;
-            line-height: 2.5rem;
+            line-height: 2rem;
             margin-bottom: 1rem ; 
             margin-top: 0.5rem;
             // color: var(--p-highlight-color);

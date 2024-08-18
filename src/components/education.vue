@@ -1,6 +1,7 @@
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
+const isMobile = computed(() => window.innerWidth < 961);
 const events = ref([
     {
         type: 'work',
@@ -134,7 +135,7 @@ const events = ref([
                         </span>
                     </template>
                     <template #opposite="slotProps">
-                        <Card class="education-timeline-card" v-if="slotProps.item.type === 'education'">
+                        <Card class="education-timeline-card" v-if="slotProps.item.type === 'education' && !isMobile">
                             <template #title>
                                <h4>{{ slotProps.item.title }}</h4>
                             </template>
@@ -152,11 +153,22 @@ const events = ref([
                         </Card>
                     </template>
                     <template #content="slotProps">
-                        <Card class="education-timeline-card" v-if="slotProps.item.type === 'work'">
+                        <Card class="education-timeline-card" v-if="slotProps.item.type === 'work' || (isMobile && slotProps.item.type === 'education')">
                             <template #title>
                                <h4>{{ slotProps.item.title }}</h4>
                             </template>
-                            <template #content>
+                            <template #subtitle v-if="isMobile && slotProps.item.type === 'education'">
+                                <em>{{ slotProps.item.major }}</em>
+                            </template>
+                            <template #content v-if="isMobile && slotProps.item.type === 'education'">
+                                <b>{{ slotProps.item.university }}</b>
+                                <br />
+                                {{ slotProps.item.startDate }} - {{ slotProps.item.endDate }}
+                                <br />
+                                <small><b>Learnings:</b></small><br />
+                                <Tag v-for="course in slotProps.item.courseWork" :key="course">{{ course }}</Tag>
+                            </template>
+                            <template #content v-else>
                                 <b>{{ slotProps.item.company }}</b>
                                 <br />
                                 {{ slotProps.item.endDate }} - {{ slotProps.item.startDate }}
@@ -242,6 +254,17 @@ const events = ref([
             }
             .p-chip {
                 margin: 5px;
+            }
+            .p-timeline-event-opposite {
+                @media screen and (max-width: 960px) {
+                    display: none;
+                }
+            }
+            .p-timeline-event {
+                @media screen and (max-width: 960px) {
+                    padding-left: 30px;
+                    padding-right: 10px;
+                }
             }
         }
         img.wave {

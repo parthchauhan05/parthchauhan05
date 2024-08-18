@@ -50,7 +50,7 @@ const hireMe = () => {
 </template>
 <style lang="scss">
     .hero {
-        @media (screen and max-width: 960px) {
+        @media screen and (max-width: 960px) {
             flex-direction: column-reverse;
         }
         width: 100%;
@@ -94,7 +94,7 @@ const hireMe = () => {
                 max-width: 90%;
             }
             &-button-group {
-                @media (screen and max-width: 960px) {
+                @media screen and (max-width: 960px) {
                     flex-direction: column;
                 }
                 display: flex;
@@ -105,6 +105,9 @@ const hireMe = () => {
                 margin-top: 1rem;
             }
             &-social-links {
+                @media screen and (max-width: 960px) {
+                    justify-content: center ;
+                }
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;

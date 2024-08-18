@@ -60,7 +60,7 @@
                 color: white;
             }
             &-button-group {
-                @media (screen and max-width: 960px) {
+                @media screen and (max-width: 960px) {
                     flex-direction: column;
                 }
                 display: flex;
@@ -76,6 +76,9 @@
                 justify-content: center;
                 align-items: center;
                 gap: 1rem;
+                a.p-button {
+                    text-decoration: none;
+                }
             }
         }
         img.wave {

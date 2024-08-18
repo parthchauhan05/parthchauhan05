@@ -179,6 +179,10 @@ const tools = ref([
       flex-wrap: wrap;
       gap: 5rem;
       margin: 2rem 0;
+      @media screen and (max-width: 960px) {
+        gap: 2rem;
+        
+      }
       img {
         width: 3rem;
         height: 3rem;

@@ -42,7 +42,7 @@ const goTo = (location) => {
 <template>
   <Menubar :model="items" class="parth-navigation">
     <template #start v-if="!isMobile">
-      <h3>Parth Chauhan</h3>
+      <h1>Parth Chauhan</h1>
     </template>
     <template #item="{ item, props }">
         <a v-ripple class="flex items-center" v-bind="props.action" @click="goTo(item.location)">
@@ -83,7 +83,7 @@ const goTo = (location) => {
             background-color: var(--p-menubar-item-focus-background);
             border-radius: 5px;
         }
-        h3 {
+        h1 {
             font-size: 1.75rem;
             font-weight: 600;
             line-height: 2rem;

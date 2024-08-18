@@ -27,8 +27,8 @@ const hireMe = () => {
 <template>
     <section class="hero">
         <div class="hero-info">
-            <h4>Hello, I am Parth --</h4>
-            <h3>I am an experienced Web Developer</h3>
+            <h3>Hello, I am Parth -</h3>
+            <h2>I am an experienced Web Developer</h2>
             <p>I am currently working as a Software Engineer at Sryas Inc. I have completed my graduation in Information and Communication Technology. I have a diploma in Interactive Media Design, focused on UI/UX and Frontend Web Development.</p>
             <div class="hero-info-button-group">
                 <Button rounded>
@@ -37,10 +37,10 @@ const hireMe = () => {
                     <i class="pi pi-download"></i>Download CV</Button>
             </div>
             <div class="hero-info-social-links">
-                <a href="https://github.com/parthchauhan05" target="_blank"><i class="pi pi-github" style="font-size: 1.5rem;"></i></a>
-                <a href="https://www.linkedin.com/in/parthchauhan05/" target="_blank"><i class="pi pi-linkedin" style="font-size: 1.5rem;"></i></a>
+                <a href="https://github.com/parthchauhan05" target="_blank"><i class="pi pi-github" style="font-size: 1.5rem; color: #551A8B;"></i></a>
+                <a href="https://www.linkedin.com/in/parthchauhan05/" target="_blank"><i class="pi pi-linkedin" style="font-size: 1.5rem; color: #551A8B;"></i></a>
                 <a href="mailto:parthchauhan05@gmail.com" target="_blank"><i class="pi pi-google" style="font-size: 1.5rem; color: #551A8B;"></i></a> 
-                <a href="https://wa.me/+16135012020" target="_blank"><i class="pi pi-whatsapp" style="font-size: 1.5rem;"></i></a>
+                <a href="https://wa.me/+16135012020" target="_blank"><i class="pi pi-whatsapp" style="font-size: 1.5rem; color: #551A8B;"></i></a>
             </div>
         </div>
         <div class="hero-image">
@@ -49,10 +49,15 @@ const hireMe = () => {
     </section>
 </template>
 <style lang="scss">
+ @media screen and (max-width: 960px) {
     .hero {
-        @media screen and (max-width: 960px) {
-            flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        &-info {
+            width: 100%;
         }
+    }
+}
+    .hero {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto; 
@@ -73,19 +78,16 @@ const hireMe = () => {
         }
 
         &-info {
-            @media screen and (max-width: 960px) {
-                width: 100%;
-            }
             width: 60%;
             max-width: 720px;
-            h4 {
+            h3 {
                 font-size: 1.5rem;
                 font-weight: 500;
                 line-height: 1.75rem;
                 margin-bottom: 0;
                 color: var(--p-primary-color);
             }
-            h3 {
+            h2 {
                 font-size: 2.25rem;
                 font-weight: 700;
                 line-height: 2.5rem;

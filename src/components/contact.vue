@@ -35,6 +35,13 @@
 </template>
 
 <style lang="scss">
+    @media screen and (max-width: 960px) {
+        .contact  {
+            &-button-group {
+                flex-direction: column;
+            }
+        }
+    }
     .contact  {
         &-info {
             padding-bottom: 2rem;
@@ -60,9 +67,6 @@
                 color: white;
             }
             &-button-group {
-                @media screen and (max-width: 960px) {
-                    flex-direction: column;
-                }
                 display: flex;
                 flex-direction: row;
                 justify-content: center;

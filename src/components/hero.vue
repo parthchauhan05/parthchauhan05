@@ -39,7 +39,7 @@ const hireMe = () => {
             <div class="hero-info-social-links">
                 <a href="https://github.com/parthchauhan05" target="_blank"><i class="pi pi-github" style="font-size: 1.5rem;"></i></a>
                 <a href="https://www.linkedin.com/in/parthchauhan05/" target="_blank"><i class="pi pi-linkedin" style="font-size: 1.5rem;"></i></a>
-                <a href="mailto:parthchauhan05@gmail.com" target="_blank"><i class="pi pi-google" style="font-size: 1.5rem; color: var(--p-primary-400);"></i></a> 
+                <a href="mailto:parthchauhan05@gmail.com" target="_blank"><i class="pi pi-google" style="font-size: 1.5rem; color: #551A8B;"></i></a> 
                 <a href="https://wa.me/+16135012020" target="_blank"><i class="pi pi-whatsapp" style="font-size: 1.5rem;"></i></a>
             </div>
         </div>
@@ -73,6 +73,9 @@ const hireMe = () => {
         }
 
         &-info {
+            @media screen and (max-width: 960px) {
+                width: 100%;
+            }
             width: 60%;
             max-width: 720px;
             h4 {
@@ -94,9 +97,6 @@ const hireMe = () => {
                 max-width: 90%;
             }
             &-button-group {
-                @media screen and (max-width: 960px) {
-                    flex-direction: column;
-                }
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
@@ -105,9 +105,6 @@ const hireMe = () => {
                 margin-top: 1rem;
             }
             &-social-links {
-                @media screen and (max-width: 960px) {
-                    justify-content: center ;
-                }
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;

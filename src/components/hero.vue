@@ -49,14 +49,6 @@ const hireMe = () => {
     </section>
 </template>
 <style lang="scss">
- @media screen and (max-width: 960px) {
-    .hero {
-        flex-direction: column-reverse;
-        &-info {
-            width: 100%;
-        }
-    }
-}
     .hero {
         width: 100%;
         max-width: 1200px;
@@ -116,4 +108,13 @@ const hireMe = () => {
             }
         }
     }
+    @media screen and (max-width: 960px) {
+    .hero {
+        flex-direction: column-reverse;
+        &-info {
+            width: 100%;
+        }
+    }
+}
+
 </style>

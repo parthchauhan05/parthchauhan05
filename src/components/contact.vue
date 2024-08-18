@@ -35,13 +35,6 @@
 </template>
 
 <style lang="scss">
-    @media screen and (max-width: 960px) {
-        .contact  {
-            &-button-group {
-                flex-direction: column;
-            }
-        }
-    }
     .contact  {
         &-info {
             padding-bottom: 2rem;
@@ -88,6 +81,15 @@
         img.wave {
             width: 100%;
             display: block;
+        }
+    }
+    @media screen and (max-width: 960px) {
+        .contact  {
+            &-info {
+                &-button-group {
+                    flex-direction: column;
+                }
+            }
         }
     }
 </style>

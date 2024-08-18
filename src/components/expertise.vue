@@ -4,87 +4,87 @@ import { ref } from "vue";
 const expertise = ref([
   {
     name: "Vue",
-    icon: "../../public/tech/vue.svg",
+    icon: "../../tech/vue.svg",
     level: "Advanced",
   },
   {
     name: "JavaScript",
-    icon: "../../public/tech/javascript.svg",
+    icon: "../../tech/javascript.svg",
     level: "Advanced",
   },
   {
     name: "TypeScript",
-    icon: "../../public/tech/typescript.svg",
+    icon: "../../tech/typescript.svg",
     level: "Advanced",
   },
   {
     name: "React",
-    icon: "../../public/tech/react.svg",
+    icon: "../../tech/react.svg",
     level: "Intermediate",
   },
   {
     name: "Pinia",
-    icon: "../../public/tech/pinia.svg",
+    icon: "../../tech/pinia.svg",
     level: "Advanced",
   },
   {
     name: "Element Plus",
-    icon: "../../public/tech/element-plus.svg",
+    icon: "../../tech/element-plus.svg",
     level: "Advanced",
   },
   {
     name: "HTML",
-    icon: "../../public/tech/html5.svg",
+    icon: "../../tech/html5.svg",
     level: "Advanced",
   },
   {
     name: "CSS",
-    icon: "../../public/tech/css3.svg",
+    icon: "../../tech/css3.svg",
     level: "Advanced",
   },
   {
     name: "SCSS",
-    icon: "../../public/tech/scss.svg",
+    icon: "../../tech/scss.svg",
     level: "Intermediate",
   },
   {
     name: "Bootstrap",
-    icon: "../../public/tech/bootstrap.svg",
+    icon: "../../tech/bootstrap.svg",
     level: "Intermediate",
   },
   {
     name: "Shopify",
-    icon: "../../public/tech/shopify.svg",
+    icon: "../../tech/shopify.svg",
     level: "Basic",
   },
   {
     name: "Python",
-    icon: "../../public/tech/python.svg",
+    icon: "../../tech/python.svg",
     level: "Intermediate",
   },
   {
     name: "Django",
-    icon: "../../public/tech/django.svg",
+    icon: "../../tech/django.svg",
     level: "Basic",
   },
   {
     name: "Ruby",
-    icon: "../../public/tech/ruby.svg",
+    icon: "../../tech/ruby.svg",
     level: "Intermediate",
   },
   {
     name: "Ruby on Rails",
-    icon: "../../public/tech/rails.svg",
+    icon: "../../tech/rails.svg",
     level: "Intermediate",
   },
   {
     name: "SQL",
-    icon: "../../public/tech/sql.svg",
+    icon: "../../tech/sql.svg",
     level: "Intermediate",
   },
   {
     name: "MongoDB",
-    icon: "../../public/tech/mongodb.svg",
+    icon: "../../tech/mongodb.svg",
     level: "Intermediate",
   }
 ]);
@@ -92,42 +92,42 @@ const expertise = ref([
 const tools = ref([
   {
     name: "Git",
-    icon: "../../public/tech/git.svg",
+    icon: "../../tech/git.svg",
     level: "Advanced",
   },
   {
     name: "GitHub",
-    icon: "../../public/tech/github.svg",
+    icon: "../../tech/github.svg",
     level: "Advanced",
   },
   {
     name: "VS Code",
-    icon: "../../public/tech/vscode.svg",
+    icon: "../../tech/vscode.svg",
     level: "Advanced",
   },
   {
     name: "Jira",
-    icon: "../../public/tech/jira.svg",
+    icon: "../../tech/jira.svg",
     level: "Intermediate",
   },
   {
     name: "Confluence",
-    icon: "../../public/tech/confluence.svg",
+    icon: "../../tech/confluence.svg",
     level: "Intermediate",
   },
   {
     name: "Slack",
-    icon: "../../public/tech/slack.svg",
+    icon: "../../tech/slack.svg",
     level: "Intermediate",
   },
   {
     name: "Office 365",
-    icon: "../../public/tech/office365.svg",
+    icon: "../../tech/office365.svg",
     level: "Intermediate",
   },
   {
     name: "Figma",
-    icon: "../../public/tech/figma.svg",
+    icon: "../../tech/figma.svg",
     level: "Intermediate",
   },
 ])

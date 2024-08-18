@@ -1,7 +1,7 @@
 <script setup>
 
 const downloadCv = async () => {
-    const url = '../../public/parth-chauhan-resume.pdf';
+    const url = '../../parth-chauhan-resume.pdf';
     try {
         const response = await fetch(url);
         const blob = await response.blob();

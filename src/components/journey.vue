@@ -61,6 +61,7 @@ export default {
                     title: 'Diploma',
                     major: 'Interactive Media Design',
                     university: 'Algonquin College of Applied Arts and Technology (ACAT)',
+                    universityShort: 'Algonquin College',
                     startDate: 'January 2019',
                     endDate: 'August 2020',
                     courseWork: ['UI/UX','Web Development','Project Management','HTML','CSS','JavaScript','Vue.js','Shopify'],
@@ -122,6 +123,7 @@ export default {
                     title: 'Bachelors of Technology',
                     major: 'Information and Communication Technology',
                     university: 'Dhirubhai Ambani Institute of Information and Communication Technology (DA-IICT)',
+                    universityShort: 'DA-IICT',
                     startDate: 'July 2014',
                     endDate: 'May 2018',
                     courseWork: ['Computer Programming','Database Management','Operating Systems','Web Technology','Software Testing','Software Engineering'],
@@ -152,67 +154,8 @@ export default {
         <div class="education-history">
             <h3>My Journey</h3>
             <i class="pi pi-ellipsis-h" style="font-size: 2rem;color: white;"></i>
-            <!-- <Stepper :value="stepper" class="education-timeline">
-                <StepItem v-for="(item, index) in events" :key="index" :value="index+1" >
-                    <Step v-slot="{ activateCallback }" asChild>
-                        <div class="education-timeline-header" @click="activateCallback">
-                                <span class="education-timeline-marker" :class="item.type">
-                                    <i class="pi pi-graduation-cap" v-if="item.type === 'education'"></i>
-                                    <i class="pi pi-briefcase" v-else></i>
-                                </span>
-                                {{ item.title }}, {{ item.type === 'education' ? item.university : item.company }}
-                        </div>
-                        <Divider layout="vertical" />
-                    </Step>
-                    <StepPanel v-slot="{ activateCallback }">
-                        <Card class="education-timeline-card">
-                            <template #title>
-                               <h4>{{ item.title }}</h4>
-                            </template>
-                            <template #subtitle v-if="item.type === 'education'">
-                                <em>{{ item.major }}</em>
-                            </template>
-                            <template #content v-if="item.type === 'education'">
-                                <b>{{ item.university }}</b>
-                                <br />
-                                {{ item.startDate }} - {{ item.endDate }}
-                                <br />
-                                <small><b>Learnings:</b></small><br />
-                                <Tag v-for="course in item.courseWork" :key="course">{{ course }}</Tag>
-                            </template>
-                            <template #content v-else>
-                                <b>{{ item.company }}</b>
-                                <br />
-                                {{ item.endDate }} - {{ item.startDate }}
-                                <br />
-                                <small><b>Responsibilities:</b></small>
-                                <ul>
-                                    <li v-for="work in item.work" :key="work">{{ work }}</li>
-                                </ul>
-                                <small><b>Technologies:</b></small>
-                                <br />
-                                <Chip 
-                                    v-for="tech in item.technology" 
-                                    :key="tech.name" 
-                                    :label="tech.name" 
-                                    :image="tech.icon"
-                                />
-                            </template>
-                        </Card>
-                    </StepPanel>
-                </StepItem>
-            </Stepper> -->
-
-            <div class="education-timeline">
+            <div class="education-timeline" v-if="!isMobile">
                 <div class="education-timeline-left">
-                    <!-- <div class="education-timeline-header" @click="activateCallback" v-for="(item, index) in events" :key="index">
-                            <span class="education-timeline-marker" :class="item.type">
-                                <i class="pi pi-graduation-cap" v-if="item.type === 'study'"></i>
-                                <i class="pi pi-briefcase" v-else></i>
-                            </span>
-                            
-                            {{ item.title }}
-                    </div> -->
                     <Timeline :value="events" class="customized-timeline">
                         <template #marker="slotProps">
                             <span class="education-timeline-marker" :class="slotProps.item.type" @click="changeItem(slotProps.item.id)">
@@ -220,13 +163,12 @@ export default {
                                 <i class="pi pi-briefcase" v-else></i>
                             </span>
                         </template>
-                        <!-- <template #opposite="slotProps">
-                            <span>{{ slotProps.item.startDate }} - {{ slotProps.item.endDate }}</span>
-                        </template> -->
                         <template #content="slotProps">
-                            <span class="pointer" @click="changeItem(slotProps.item.id)"> {{ slotProps.item.title }}, {{ slotProps.item.type === 'study' ? slotProps.item.university : slotProps.item.company }}</span>
-                            <br />
-                            <em class="education-timeline-period" :class="slotProps.item.type === 'study' ? 'study' : ''">({{ slotProps.item.startDate }} - {{ slotProps.item.endDate }})</em>
+                            <div class="education-timeline-item" :class="activeItem == slotProps.item.id ? 'active': ''">
+                                <span class="pointer" @click="changeItem(slotProps.item.id)"> {{ slotProps.item.title }}, {{ slotProps.item.type === 'study' ? slotProps.item.university : slotProps.item.company }}</span>
+                                <br />
+                                <em class="education-timeline-period" :class="slotProps.item.type === 'study' ? 'study' : ''">({{ slotProps.item.startDate }} - {{ slotProps.item.endDate }})</em>
+                            </div>
                         </template>
                     </Timeline>
                 </div>
@@ -267,6 +209,61 @@ export default {
                     </Card>
                 </div>
             </div>
+            <div class="education-accordian" v-else>
+                <Accordion :value="[0]" multiple expandIcon="pi pi-plus" collapseIcon="pi pi-minus">
+                    <AccordionPanel v-for="(item, id) in events" :key="id" :value="id">
+                        <AccordionHeader>
+                            <span class="education-accordian-header">
+                                <span class="education-timeline-marker" :class="item.type">
+                                    <i class="pi pi-graduation-cap" v-if="item.type === 'study'"></i>
+                                    <i class="pi pi-briefcase" v-else></i>
+                                </span>
+                                <span class="education-accordian-header-title" :class="item.type === 'study' ? 'study' : ''">
+                                    {{ item.title }}
+                                    <br />
+                                    <em>{{ item.type === 'study' ? item.universityShort : item.company }}</em>
+                                </span>
+                            </span>
+                        </AccordionHeader>
+                        <AccordionContent>
+                            <Card class="education-timeline-card">
+                                <template #title>
+                                    <h4>{{ item.title }}</h4>
+                                </template>
+                                <template #subtitle v-if="item.type === 'study'">
+                                    <em>{{ item.major }}</em>
+                                </template>
+                                <template #content v-if="item.type === 'study'">
+                                    <b>{{ item.university }}</b>
+                                    <br />
+                                    {{ item.startDate }} - {{ item.endDate }}
+                                    <br />
+                                    <small><b>Learnings:</b></small><br />
+                                    <Tag v-for="course in item.courseWork" :key="course">{{ course }}</Tag>
+                                </template>
+                                <template #content v-else>
+                                    <b>{{ item.company }}</b>
+                                    <br />
+                                    {{ item.endDate }} - {{ item.startDate }}
+                                    <br />
+                                    <small><b>Responsibilities:</b></small>
+                                    <ul>
+                                        <li v-for="work in item.work" :key="work">{{ work }}</li>
+                                    </ul>
+                                    <small><b>Technologies:</b></small>
+                                    <br />
+                                    <Chip 
+                                        v-for="tech in item.technology" 
+                                        :key="tech.name" 
+                                        :label="tech.name" 
+                                        :image="tech.icon"
+                                    />
+                                </template>
+                            </Card>  
+                        </AccordionContent>
+                    </AccordionPanel>
+                </Accordion>
+            </div>
         </div>
         <img class="wave wave-close" src="../assets/wave-close.svg"/>
     </section>
@@ -296,7 +293,7 @@ export default {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding-top: 30px;
+            padding: 30px;
             display: flex;
             flex-direction: row;
             gap: 2rem;
@@ -355,6 +352,7 @@ export default {
                 text-align: left;
                 width: 90%;
                 margin: 30px auto;
+                margin-right: 0;
                 @media screen and (max-width: 960px) {
                     width: 100%;
                 }
@@ -371,6 +369,18 @@ export default {
                     margin: 5px;
                 }
             }
+            .active {
+                border-radius: 25px;
+                font-weight: 700;
+                background: var(--p-primary-800);
+                box-shadow: 0px 10px 13px -7px #00000030;
+                em {
+                    color: #A3D9FF;
+                }
+            }
+            &-item {
+                padding: 5px 5px 5px 20px;
+            }
         }
         .p-steppanel {
             background: inherit;
@@ -381,6 +391,30 @@ export default {
         }
         .p-timeline-event-opposite {        
             display: none;
+        }
+        &-accordian {
+            margin: 0 20px;
+            &-header {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
+                cursor: pointer;
+                &-title {
+                    color: var(--p-primary-800);
+                    text-align: left;
+                }
+            }
+            .p-accordioncontent-content {
+                background-color: var(--p-primary-400);
+                padding: 1.5rem 0;
+                .education-timeline-card.p-card {
+                    margin: 0;
+                    ul {
+                        padding-inline-start: 25px;
+                    }
+                }
+            }
         }
         img.wave {
             width: 102%;

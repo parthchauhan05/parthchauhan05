@@ -4,23 +4,23 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@primevue/themes": "^4.0.4",
-    "firebase": "^10.13.0",
-    "jump.js": "^1.0.2",
-    "primeicons": "^7.0.0",
-    "primevue": "^4.0.4",
-    "vue": "^3.4.35"
+    "@primevue/themes": "~4.0.4",
+    "firebase": "~10.13.0",
+    "jump.js": "~1.0.2",
+    "primeicons": "~7.0.0",
+    "primevue": "~4.0.4",
+    "vue": "~3.4.35"
   },
   "devDependencies": {
-    "@primevue/auto-import-resolver": "^4.0.4",
-    "@vitejs/plugin-vue": "^5.1.2",
-    "sass-embedded": "^1.77.8",
-    "unplugin-vue-components": "^0.27.4",
-    "vite": "^5.4.0"
+    "@primevue/auto-import-resolver": "~4.0.4",
+    "@vitejs/plugin-vue": "~5.1.2",
+    "sass-embedded": "~1.77.8",
+    "unplugin-vue-components": "~0.27.4",
+    "vite": "~5.4.0"
   }
 }

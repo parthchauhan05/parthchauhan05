@@ -29,14 +29,18 @@ const hireMe = () => {
         <div class="hero-info">
             <h3>Hello, I am Parth -</h3>
             <h2>I am an experienced Web Developer</h2>
-            <p>I am currently working as a Software Engineer at Sryas Inc. I have completed my graduation in Information and Communication Technology. I have a diploma in Interactive Media Design, focused on UI/UX and Frontend Web Development.</p>
+            <p>I am a software engineer with 5+ years of experience designing and delivering enterprise-grade applications and SaaS platforms.
+Skilled in Java, Spring Boot, REST APIs, and MongoDB, complemented by Vue & React-based frontend development and AWS cloud
+deployment. Experienced in building secure billing systems supporting 465,000+ users, implementing scalable microservices, and
+improving release stability through Docker-based containerization and CI/CD pipelines. Adept at ccollaborating within
+Agile/Scrum environments to deliver reliable, high-performance software aligned with modern SDLC practices.</p>
             <div class="hero-info-button-group">
                 <Button rounded>
                     <i class="pi pi-envelope" @click="hireMe"></i>Hire me</Button>
                 <Button outlined rounded @click="downloadCv">
                     <i class="pi pi-download"></i>Download CV</Button>
-            </div>
-            <div class="hero-info-social-links">
+            <!-- </div>
+            <div class="hero-info-social-links"> -->
                 <a href="https://github.com/parthchauhan05" target="_blank"><i class="pi pi-github" style="font-size: 1.5rem; color: #551A8B;"></i></a>
                 <a href="https://www.linkedin.com/in/parthchauhan05/" target="_blank"><i class="pi pi-linkedin" style="font-size: 1.5rem; color: #551A8B;"></i></a>
                 <a href="mailto:parthchauhan05@gmail.com" target="_blank"><i class="pi pi-google" style="font-size: 1.5rem; color: #551A8B;"></i></a> 
@@ -70,7 +74,7 @@ const hireMe = () => {
         }
 
         &-info {
-            width: 60%;
+            width: 70%;
             max-width: 720px;
             h3 {
                 font-size: 1.5rem;

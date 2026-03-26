@@ -3,8 +3,8 @@ import { ref } from "vue";
 
 const expertise = ref([
   {
-    name: "Vue",
-    icon: "../../tech/vue.svg",
+    name: "Java",
+    icon: "../../tech/Java.svg",
     level: "Advanced",
   },
   {
@@ -18,19 +18,9 @@ const expertise = ref([
     level: "Advanced",
   },
   {
-    name: "React",
-    icon: "../../tech/react.svg",
+    name: "Python",
+    icon: "../../tech/python.svg",
     level: "Intermediate",
-  },
-  {
-    name: "Pinia",
-    icon: "../../tech/pinia.svg",
-    level: "Advanced",
-  },
-  {
-    name: "Element Plus",
-    icon: "../../tech/element-plus.svg",
-    level: "Advanced",
   },
   {
     name: "HTML",
@@ -48,34 +38,49 @@ const expertise = ref([
     level: "Intermediate",
   },
   {
+    name: "Element Plus",
+    icon: "../../tech/element-plus.svg",
+    level: "Advanced",
+  },
+  {
     name: "Bootstrap",
     icon: "../../tech/bootstrap.svg",
     level: "Intermediate",
   },
   {
-    name: "Shopify",
-    icon: "../../tech/shopify.svg",
-    level: "Basic",
+    name: "Vue",
+    icon: "../../tech/vue.svg",
+    level: "Advanced",
   },
   {
-    name: "Python",
-    icon: "../../tech/python.svg",
+    name: "React",
+    icon: "../../tech/react.svg",
+    level: "Intermediate",
+  },
+  {
+    name: "Pinia",
+    icon: "../../tech/pinia.svg",
+    level: "Advanced",
+  },
+  {
+    name: "Spring",
+    icon: "../../tech/Spring.svg",
+    level: "Advanced",
+  },
+  {
+    name: "Node.js",
+    icon: "../../tech/Node.js.svg",
+    level: "Advanced",
+  },
+  {
+    name: "FastAPI",
+    icon: "../../tech/FastAPI.svg",
     level: "Intermediate",
   },
   {
     name: "Django",
     icon: "../../tech/django.svg",
     level: "Basic",
-  },
-  {
-    name: "Ruby",
-    icon: "../../tech/ruby.svg",
-    level: "Intermediate",
-  },
-  {
-    name: "Ruby on Rails",
-    icon: "../../tech/rails.svg",
-    level: "Intermediate",
   },
   {
     name: "SQL",
@@ -86,7 +91,17 @@ const expertise = ref([
     name: "MongoDB",
     icon: "../../tech/mongodb.svg",
     level: "Intermediate",
-  }
+  },
+  {
+    name: "MySQL",
+    icon: "../../tech/MySQL.svg",
+    level: "Advanced",
+  },
+  // {
+  //   name: "Shopify",
+  //   icon: "../../tech/shopify.svg",
+  //   level: "Basic",
+  // },
 ]);
 
 const tools = ref([
@@ -109,6 +124,11 @@ const tools = ref([
     name: "Jira",
     icon: "../../tech/jira.svg",
     level: "Intermediate",
+  },
+  {
+    name: "IntelliJ IDEA",
+    icon: "../../tech/IntelliJ IDEA.svg",
+    level: "Advanced",
   },
   {
     name: "Confluence",

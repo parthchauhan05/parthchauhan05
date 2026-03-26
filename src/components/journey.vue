@@ -8,56 +8,59 @@ export default {
                 {
                     type: 'work',
                     id: 1,
-                    title: 'Associate Software Engineer',
-                    company: 'Sryas Inc.',
+                    title: 'Software Engineer',
+                    company: 'Orion Innovation (Bell Canada)',
                     endDate: 'Present',
                     startDate: 'October 2021',
                     work: [
-                        'Leading Front-end development team since January 2024.',
-                        'Creating reusable code and components for future use with Vue, Pinia, JavaScript, TypeScript, and SCSS.',
-                        'Collaborating with cross-functional teams to implement new features.',
-                        'Participating in agile ceremonies, code reviews and pair programming.',
-                        'Working with the design team to ensure the design of the UI/UX.',
-                        'Trained around 10 developers in 1 month and improved their skills.',
-                        'Successfully upgraded the project from Vue 2 to Vue 3 with major library updates.',
-                        'Utilizing GitLab for version control and created/merged multiple pull requests daily, contributing to a 50% increase in task success rate.',
-                        'Developed and maintained unit tests for core functionalities, ensuring high code quality and reliability.',
+                        'Led frontend modernization initiatives, upgrading applications from Vue 2 to Vue 3, refactoring 40+ reusable UI components, and aligning the platform with scalable Single Page Application (SPA) architecture standards.',
+                        'Developed and maintained frontend modules using Vue and React, integrating 25+ REST API endpoints to support billing workflows and real-time account updates.',
+                        'Designed and owned Java Spring Boot microservices supporting core billing logic for a SaaS platform serving 465,000+ consumers, handling monthly transactions with MongoDB backed invoice and usage data storage.',
+                        'Implemented authentication and role-based authorization using Spring Security, configuring secure access controls for 10+ internal and external user groups across multi-tenant environments.',
+                        'Containerized services using Docker and supported CI/CD pipelines via GitLab, contributing to 2–3 production releases per month and improving deployment reliability.',
+                        'Trained and mentored 12 engineers in frontend development best practices, establishing reusable component standards and improving delivery consistency across new initiatives.',
+                        'Participated in technical interviews and candidate evaluations as part of the hiring panel, supporting team expansion for a newly launched enterprise billing project.',
+                        'Received a company recognition award in December 2025 for contributing to the formation and onboarding of the frontend team supporting a strategic billing initiative.',
+                        // 'Developed and maintained unit tests for core functionalities, ensuring high code quality and reliability.',
                     ],
                     technology: [
                         { icon: 'tech/vue.svg', name: 'Vue.Js' },
-                        { icon: 'tech/scss.svg', name: 'SCSS' },
-                        { icon: 'tech/javascript.svg', name: 'JavaScript' },
+                        { icon: 'tech/react.svg', name: 'React' },
                         { icon: 'tech/typescript.svg', name: 'TypeScript' },
+                        { icon: 'tech/javascript.svg', name: 'JavaScript' },
                         { icon: 'tech/pinia.svg', name: 'Pinia' },
-                        { icon: 'tech/css3.svg', name: 'CSS' },
                         { icon: 'tech/html5.svg', name: 'HTML' },
-                        { icon: 'tech/element-plus.svg', name: 'Element Plus' },
+                        { icon: 'tech/css3.svg', name: 'CSS' },
+                        { icon: 'tech/scss.svg', name: 'SCSS' },
+                        { icon: 'tech/Java.svg', name: 'Java' },
+                        { icon: 'tech/Spring.svg', name: 'Spring Boot' },
+                        { icon: 'tech/mongodb.svg', name: 'MongoDB' },
                     ]
                 },
-                {
-                    type: 'work',
-                    id: 2,
-                    title: 'Web Developer',
-                    company: 'Digital Main Street | Invest Ottawa',
-                    endDate: 'July 2021',
-                    startDate: 'May 2021',
-                    work: [
-                        'Helped local businesses with website and/or online presentation.',
-                        'Modified existing Shopify store for better user experience.',
-                        'Worked on Wordpress website for local business.',
-                        'Developed online course platform using Thinkific.',
-                        'Enhanced SEO and Google Analytics for local businesses.',
-                    ],
-                    technology: [
-                        { icon: 'tech/shopify.svg', name: 'Shopify' },
-                        { icon: 'tech/wordpress.svg', name: 'Wordpress' },
-                        { icon: 'tech/thinkific.svg', name: 'Thinkific' },
-                        { icon: 'tech/google-analytics.svg', name: 'Google Analytics' },
-                    ]
-                },
+                // {
+                //     type: 'work',
+                //     id: 2,
+                //     title: 'Web Developer',
+                //     company: 'Digital Main Street | Invest Ottawa',
+                //     endDate: 'July 2021',
+                //     startDate: 'May 2021',
+                //     work: [
+                //         'Helped local businesses with website and/or online presentation.',
+                //         'Modified existing Shopify store for better user experience.',
+                //         'Worked on Wordpress website for local business.',
+                //         'Developed online course platform using Thinkific.',
+                //         'Enhanced SEO and Google Analytics for local businesses.',
+                //     ],
+                //     technology: [
+                //         { icon: 'tech/shopify.svg', name: 'Shopify' },
+                //         { icon: 'tech/wordpress.svg', name: 'Wordpress' },
+                //         { icon: 'tech/thinkific.svg', name: 'Thinkific' },
+                //         { icon: 'tech/google-analytics.svg', name: 'Google Analytics' },
+                //     ]
+                // },
                 { 
                     type: 'study',
-                    id: 3,
+                    id: 2,
                     title: 'Diploma',
                     major: 'Interactive Media Design',
                     university: 'Algonquin College of Applied Arts and Technology (ACAT)',
@@ -68,58 +71,66 @@ export default {
                 },
                 {
                     type: 'work',
-                    id: 4,
-                    title: 'Web Developer',
-                    company: 'WiseL',
+                    id: 3,
+                    title: 'Software Developer',
+                    company: 'Airbnb',
                     endDate: 'December 2018',
                     startDate: 'December 2016',
                     work: [
-                        'Developed APIs for the web application and mobile application using Flask, Python, Firebase and MongoDB.', 
-                        'Worked in an incubator startup with new challenges everyday.',
-                        'Mentored 2 interns for web development.'
+                        'Developed backend services using Java and RESTful APIs, contributing to 8+ service modules supporting booking workflows and internal content management features used by regional operations teams.', 
+                        'Built 25+ reusable UI components using React, JavaScript, HTML5, and CSS3, improving frontend maintainability and reducing duplicate UI logic across listing and booking pages.',
+                        'Integrated frontend modules with 15+ backend REST API endpoints, collaborating with a 6-member backend team to ensure consistent request/response handling and reliable booking state transitions.',
+                        'Optimized 20+ high-usage SQL queries and refined indexing strategies in MySQL, improving listing retrieval performance during peak evening traffic cycles.',
+                        'Supported application deployments in AWS (EC2, S3) environments, contributing to 2+ production releases per month and assisting with environment validation across development and staging instances.',
+                        'Worked within an Agile/Scrum team of 7 engineers, participating in bi-weekly sprint planning, reviewing 15+ pull requests per month, and contributing to feature estimation and technical design discussions.'
                     ],
                     technology: [
-                        { icon: 'tech/python.svg', name: 'Python' },
-                        { icon: 'tech/flask.svg', name: 'Flask' },
-                        { icon: 'tech/mongodb.svg', name: 'MongoDB' },
-                        { icon: 'tech/firebase.svg', name: 'Firebase' },
+                        { icon: 'tech/react.svg', name: 'React' },
+                        { icon: 'tech/typescript.svg', name: 'TypeScript' },
+                        { icon: 'tech/javascript.svg', name: 'JavaScript' },
+                        { icon: 'tech/html5.svg', name: 'HTML' },
+                        { icon: 'tech/css3.svg', name: 'CSS' },
+                        { icon: 'tech/scss.svg', name: 'SCSS' },
+                        { icon: 'tech/Java.svg', name: 'Java' },
+                        { icon: 'tech/Spring.svg', name: 'Spring Boot' },
+                        { icon: 'tech/MySQL.svg', name: 'MySQL' },
                     ]
                 },
-                {
-                    type: 'work',
-                    id: 5,
-                    title: 'Python Developer Intern',
-                    company: 'Punchit.io',
-                    endDate: 'July 2017',
-                    startDate: 'May 2017',
-                    work: [
-                        'Developed APIs for the mobile application using Django, Python and MongoDB.'
-                    ],
-                    technology: [
-                        { icon: 'tech/python.svg', name: 'Python' },
-                        { icon: 'tech/django.svg', name: 'Django' },
-                        { icon: 'tech/mongodb.svg', name: 'MongoDB' },
-                    ]
-                },
-                {
-                    type: 'work',
-                    id: 6,
-                    title: 'Python Developer Intern',
-                    company: 'ThingsXthings',
-                    endDate: 'December 2016',
-                    startDate: 'November 2016',
-                    work: [
-                        'Created desktop application using Python and Tkinter for prototype.',
-                        'Worked on algorithm enhancement for prototype.' 
-                    ],
-                    technology: [
-                        { icon: 'tech/python.svg', name: 'Python' },
-                        { icon: 'tech/tkinter.png', name: 'Tkinter' },
-                    ]
-                },
+                // {
+                //     type: 'work',
+                //     id: 5,
+                //     title: 'Python Developer Intern',
+                //     company: 'Punchit.io',
+                //     endDate: 'July 2017',
+                //     startDate: 'May 2017',
+                //     work: [
+                //         'Developed APIs for the mobile application using Django, Python and MongoDB.'
+                //     ],
+                //     technology: [
+                //         { icon: 'tech/python.svg', name: 'Python' },
+                //         { icon: 'tech/django.svg', name: 'Django' },
+                //         { icon: 'tech/mongodb.svg', name: 'MongoDB' },
+                //     ]
+                // },
+                // {
+                //     type: 'work',
+                //     id: 6,
+                //     title: 'Python Developer Intern',
+                //     company: 'ThingsXthings',
+                //     endDate: 'December 2016',
+                //     startDate: 'November 2016',
+                //     work: [
+                //         'Created desktop application using Python and Tkinter for prototype.',
+                //         'Worked on algorithm enhancement for prototype.' 
+                //     ],
+                //     technology: [
+                //         { icon: 'tech/python.svg', name: 'Python' },
+                //         { icon: 'tech/tkinter.png', name: 'Tkinter' },
+                //     ]
+                // },
                 { 
                     type: 'study',
-                    id: 7,
+                    id: 4,
                     title: 'Bachelors of Technology',
                     major: 'Information and Communication Technology',
                     university: 'Dhirubhai Ambani Institute of Information and Communication Technology (DA-IICT)',
